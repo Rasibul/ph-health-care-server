@@ -1,8 +1,16 @@
-import express from 'express';
-const app = express();
+import app from './app';
+
 
 const port = 3000
 
-app.listen(port, () => {
-    console.log(`Server is running at ${port}`);
-});
+
+async function main() {
+    const server = app.listen(port, () => {
+        console.log(`Server is running at ${port}`);
+    });
+
+}
+
+
+
+main();
